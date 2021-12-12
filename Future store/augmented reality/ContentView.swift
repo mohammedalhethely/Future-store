@@ -74,7 +74,7 @@ struct ARViewContainer: UIViewRepresentable {
             if let modelEntity = model.modelEntity {
                 
                 print("DEBUG: adding model to scene - \(model.modelName)")
-                let anchorEntity = AnchorEntity(plane: .any)
+                let anchorEntity = AnchorEntity(.camera)
                 anchorEntity.addChild(modelEntity)
                 uiView.scene.addAnchor(anchorEntity)
             }else{

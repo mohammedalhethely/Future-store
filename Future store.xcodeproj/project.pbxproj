@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B4D4A6C2765CAA100D9A693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D4A6B2765CAA100D9A693 /* Main.storyboard */; };
+		0B4D4A6E2765CAD900D9A693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D4A6D2765CAD900D9A693 /* LaunchScreen.storyboard */; };
+		0B4D4A702765D82000D9A693 /* signInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D4A6F2765D82000D9A693 /* signInViewController.swift */; };
+		0B4D4A722765D83F00D9A693 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D4A712765D83F00D9A693 /* signUpViewController.swift */; };
+		0B4D4A772765EED700D9A693 /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D4A762765EED700D9A693 /* animationViewController.swift */; };
+		0B4D4A792766096B00D9A693 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D4A782766096B00D9A693 /* UserApi.swift */; };
+		0B4D4A7D276629FB00D9A693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D4A7C276629FB00D9A693 /* Assets.xcassets */; };
 		0B9198EC2760C9B400CEDA78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */; };
 		0B9198EE2760C9B400CEDA78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9198ED2760C9B400CEDA78 /* ContentView.swift */; };
-		0B9198F22760C9B500CEDA78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9198F12760C9B500CEDA78 /* Assets.xcassets */; };
 		0B9198F52760C9B500CEDA78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9198F42760C9B500CEDA78 /* Preview Assets.xcassets */; };
 		0B9198FF2760C9B500CEDA78 /* Future_storeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9198FE2760C9B500CEDA78 /* Future_storeTests.swift */; };
 		0B9199092760C9B500CEDA78 /* Future_storeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9199082760C9B500CEDA78 /* Future_storeUITests.swift */; };
@@ -38,10 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B9198E82760C9B400CEDA78 /* Future store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B4D4A6B2765CAA100D9A693 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0B4D4A6D2765CAD900D9A693 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B4D4A6F2765D82000D9A693 /* signInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInViewController.swift; sourceTree = "<group>"; };
+		0B4D4A712765D83F00D9A693 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		0B4D4A762765EED700D9A693 /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
+		0B4D4A782766096B00D9A693 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		0B4D4A7C276629FB00D9A693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Future store/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		0B9198E82760C9B400CEDA78 /* FAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B9198ED2760C9B400CEDA78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0B9198F12760C9B500CEDA78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B9198F42760C9B500CEDA78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B9198FA2760C9B500CEDA78 /* Future storeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Future storeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9198FE2760C9B500CEDA78 /* Future_storeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future_storeTests.swift; sourceTree = "<group>"; };
@@ -79,12 +91,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4D4A6A2765CA8100D9A693 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B4D4A6B2765CAA100D9A693 /* Main.storyboard */,
+				0B4D4A6D2765CAD900D9A693 /* LaunchScreen.storyboard */,
+				0B4D4A7C276629FB00D9A693 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B4D4A732765DDA500D9A693 /* Register and login */ = {
+			isa = PBXGroup;
+			children = (
+				0B4D4A712765D83F00D9A693 /* signUpViewController.swift */,
+				0B4D4A6F2765D82000D9A693 /* signInViewController.swift */,
+			);
+			path = "Register and login";
+			sourceTree = "<group>";
+		};
+		0B4D4A742765ED1000D9A693 /* augmented reality */ = {
+			isa = PBXGroup;
+			children = (
+				0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */,
+				0B9198ED2760C9B400CEDA78 /* ContentView.swift */,
+				0B9199322762761E00CEDA78 /* model.swift */,
+				0B4D4A782766096B00D9A693 /* UserApi.swift */,
+			);
+			path = "augmented reality";
+			sourceTree = "<group>";
+		};
+		0B4D4A752765EDE700D9A693 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0B4D4A762765EED700D9A693 /* animationViewController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		0B9198DF2760C9B400CEDA78 = {
 			isa = PBXGroup;
 			children = (
 				0B9198EA2760C9B400CEDA78 /* Future store */,
-				0B9198FD2760C9B500CEDA78 /* Future storeTests */,
-				0B9199072760C9B500CEDA78 /* Future storeUITests */,
 				0B9198E92760C9B400CEDA78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,7 +140,7 @@
 		0B9198E92760C9B400CEDA78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B9198E82760C9B400CEDA78 /* Future store.app */,
+				0B9198E82760C9B400CEDA78 /* FAS.app */,
 				0B9198FA2760C9B500CEDA78 /* Future storeTests.xctest */,
 				0B9199042760C9B500CEDA78 /* Future storeUITests.xctest */,
 			);
@@ -102,12 +150,14 @@
 		0B9198EA2760C9B400CEDA78 /* Future store */ = {
 			isa = PBXGroup;
 			children = (
-				0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */,
-				0B9198ED2760C9B400CEDA78 /* ContentView.swift */,
+				0B4D4A752765EDE700D9A693 /* Animation */,
+				0B4D4A742765ED1000D9A693 /* augmented reality */,
+				0B4D4A732765DDA500D9A693 /* Register and login */,
+				0B4D4A6A2765CA8100D9A693 /* View */,
 				0B9199172760CBB700CEDA78 /* Image3D */,
-				0B9198F12760C9B500CEDA78 /* Assets.xcassets */,
+				0B9198FD2760C9B500CEDA78 /* Future storeTests */,
+				0B9199072760C9B500CEDA78 /* Future storeUITests */,
 				0B9198F32760C9B500CEDA78 /* Preview Content */,
-				0B9199322762761E00CEDA78 /* model.swift */,
 			);
 			path = "Future store";
 			sourceTree = "<group>";
@@ -164,7 +214,7 @@
 			);
 			name = "Future store";
 			productName = "Future store";
-			productReference = 0B9198E82760C9B400CEDA78 /* Future store.app */;
+			productReference = 0B9198E82760C9B400CEDA78 /* FAS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0B9198F92760C9B500CEDA78 /* Future storeTests */ = {
@@ -253,8 +303,10 @@
 			files = (
 				0B91992F27620C4900CEDA78 /* chair.usdz in Resources */,
 				0B9198F52760C9B500CEDA78 /* Preview Assets.xcassets in Resources */,
-				0B9198F22760C9B500CEDA78 /* Assets.xcassets in Resources */,
+				0B4D4A6C2765CAA100D9A693 /* Main.storyboard in Resources */,
+				0B4D4A6E2765CAD900D9A693 /* LaunchScreen.storyboard in Resources */,
 				0B91993127620C4900CEDA78 /* tv.usdz in Resources */,
+				0B4D4A7D276629FB00D9A693 /* Assets.xcassets in Resources */,
 				0B91993027620C4900CEDA78 /* wateringcan.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,8 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4D4A722765D83F00D9A693 /* signUpViewController.swift in Sources */,
+				0B4D4A702765D82000D9A693 /* signInViewController.swift in Sources */,
 				0B9198EE2760C9B400CEDA78 /* ContentView.swift in Sources */,
+				0B4D4A772765EED700D9A693 /* animationViewController.swift in Sources */,
 				0B9199332762761E00CEDA78 /* model.swift in Sources */,
+				0B4D4A792766096B00D9A693 /* UserApi.swift in Sources */,
 				0B9198EC2760C9B400CEDA78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +505,8 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -459,7 +517,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huthelyCorp.Future-store";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FAS;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,6 +538,8 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -490,7 +550,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huthelyCorp.Future-store";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FAS;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
