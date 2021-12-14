@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5wl-pO-UrN">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5wl-pO-UrN">
                                 <rect key="frame" x="20" y="299" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -36,11 +36,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v05-sz-jW5">
-                                <rect key="frame" x="161" y="433" width="92" height="31"/>
+                                <rect key="frame" x="161" y="433" width="92" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Enter"/>
+                                <connections>
+                                    <action selector="signInAction:" destination="4wb-Qb-KfR" eventType="touchUpInside" id="8mc-Ix-sWW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH4-fn-ai7">
+                                <rect key="frame" x="161" y="512" width="92" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signInAction:" destination="4wb-Qb-KfR" eventType="touchUpInside" id="WbY-wq-EJi"/>
+                                    <segue destination="kUF-Pd-Yao" kind="presentation" modalPresentationStyle="fullScreen" id="q5j-YV-t3O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DQ6-rg-mMG"/>
@@ -48,14 +62,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="j9v-Jl-HjA"/>
                     <connections>
+                        <outlet property="email" destination="5wl-pO-UrN" id="lMC-uB-hgS"/>
                         <outlet property="password" destination="jQc-Uh-Mp2" id="RMf-WA-JBA"/>
-                        <outlet property="signIn" destination="v05-sz-jW5" id="kF9-lD-ehl"/>
-                        <outlet property="userName" destination="5wl-pO-UrN" id="XkV-hu-wpL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajs-0N-UH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.9710144927537" y="-199.55357142857142"/>
+            <point key="canvasLocation" x="1057.9710144927537" y="-229.01785714285714"/>
         </scene>
         <!--Animation View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -65,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-4r-6np">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-4r-6np">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="896" id="Sz8-ST-q6C"/>
@@ -101,16 +114,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYg-QI-fZj">
-                                <rect key="frame" x="20" y="73" width="374" height="157"/>
+                                <rect key="frame" x="20" y="44" width="374" height="135"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="1Fl-Wi-Huy"/>
+                                    <constraint firstAttribute="height" constant="135" id="1Fl-Wi-Huy"/>
                                     <constraint firstAttribute="width" constant="374" id="1ja-V5-UX0"/>
                                 </constraints>
                                 <string key="text">Augmented Reality
 The name of the application is augmented reality
  the user can see any new piece in the place he wants through the cam</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,7 +141,7 @@ The name of the application is augmented reality
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xrB-Pi-aao" secondAttribute="bottom" constant="137" id="YP2-al-y69"/>
                             <constraint firstItem="fg0-vs-zk8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ap2-wc-5m2"/>
                             <constraint firstAttribute="bottom" secondItem="BMh-4r-6np" secondAttribute="bottom" id="bN6-g0-lzm"/>
-                            <constraint firstItem="gYg-QI-fZj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="29" id="kfd-bw-D5Q"/>
+                            <constraint firstItem="gYg-QI-fZj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kfd-bw-D5Q"/>
                         </constraints>
                     </view>
                     <connections>
@@ -140,7 +153,7 @@ The name of the application is augmented reality
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="106"/>
+            <point key="canvasLocation" x="269.56521739130437" y="105.80357142857143"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="yxW-CZ-S0n">
@@ -182,13 +195,16 @@ The name of the application is augmented reality
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8r-mZ-7a3">
-                                <rect key="frame" x="143" y="556" width="129" height="31"/>
+                                <rect key="frame" x="143" y="556" width="129" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Enter">
                                     <color key="baseBackgroundColor" systemColor="secondarySystemFillColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterBotton:" destination="kUF-Pd-Yao" eventType="touchUpInside" id="qda-3Z-BfB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejn-mg-17J">
                                 <rect key="frame" x="20" y="320" width="374" height="36"/>
@@ -196,6 +212,18 @@ The name of the application is augmented reality
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHB-bB-x5K">
+                                <rect key="frame" x="143" y="641" width="129" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Login">
+                                    <color key="baseBackgroundColor" systemColor="secondarySystemFillColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4wb-Qb-KfR" kind="presentation" modalPresentationStyle="fullScreen" id="lWy-Q5-OC7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cah-te-mei"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,9 +244,13 @@ The name of the application is augmented reality
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="1057.9710144927537" y="446.65178571428567"/>
+            <point key="canvasLocation" x="1058" y="565"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="q5j-YV-t3O"/>
+        <segue reference="1lr-xH-guM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="15" width="200" height="355"/>
         <systemColor name="secondaryLabelColor">

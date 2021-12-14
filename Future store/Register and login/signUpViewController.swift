@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import SwiftUI
 
 class signUpViewController: UIViewController {
-
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -16,23 +18,40 @@ class signUpViewController: UIViewController {
     @IBOutlet weak var Phonenumber : UITextField!
     
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
         
-    
+        //        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
+        //            print(user.email ?? "")
+        //        }
     }
-    func SignUp(name: String ,email: String,password:String,phonenumber:Int) {
-    Auth.auth().createUser(withName: name, Email: email, password: password,phonenumber:phonenumber ) { authResult, error in
-
-    print("email:\(String(describing: authResult?.user.email))")
-    print("uid:\(String(describing: authResult?.user.uid))")
     
-   UserApi.addUser(name: "mohammed", uid: authResult?.user.uid ?? "", phone: "7117", email: email) { check in
-    if check {
-    print("Done saving in Database")
-    } else {
-    
-       }
-      }
-     }
+    @IBAction func enterBotton(_ sender: Any) {
+        SignUp(email: email.text ?? "", password: password.text ?? "", phon: Phonenumber.text ?? "", name: name.text ?? "")
     }
-   }
+    //Go from the registration page to Augomented realty
+    
+    func presentSwiftUIView() {
+        let swiftUIView = ContentView()
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        present(hostingController, animated: true, completion: nil)
+    }
+    
+    func SignUp(email: String,password:String,phon:String,name:String) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            
+            print("email:\(String(describing: authResult?.user.email))")
+            print("uid:\(String(describing: authResult?.user.uid))")
+            
+            UserApi.addUser(name: name, uid: authResult?.user.uid ?? "", phone: phon, email: email) { check in
+                
+                if check {
+                    print("Done saving in Database")
+                    
+                    self.presentSwiftUIView()
+                    
+                } else {
+                }
+            }
+        }
+    }
+}

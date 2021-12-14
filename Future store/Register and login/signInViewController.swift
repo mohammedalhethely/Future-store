@@ -1,80 +1,67 @@
-//
 //  signInViewController.swift
 //  Future store
 //
 //  Created by Mohammed Abdullah on 08/05/1443 AH.
-//
+
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import SwiftUI
 
-class User {
-var name:String = ""
-var age:Int = 0
-var password:Int = 0
-
-init(name:String, age:Int, userPassword:Int){
-    self.name = name
-    self.age = age
-    self.password = userPassword
-}
-}
 class signInViewController: UIViewController {
-   
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        @IBOutlet weak var userName: UITextField!
-        @IBOutlet weak var password: UITextField!
-        @IBOutlet weak var signIn: UIButton!
-        
-        
-        var userAm = User(name: "mohammed", age: 26, userPassword: 10730)
-        var userRm = User(name: "raed",age: 30, userPassword: 21209)
-        var userFm = User(name: "faisal", age: 18, userPassword: 48901)
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-        }
-        
-        
-        
-        
-        
-        @IBAction func signInAction(_ sender: UIButton) {
-            guard let userName = userName.text else {return}
-            guard let userPassword = Int(password.text ?? "0")else {return}
-            if userAm.name == userName && userAm.password == userPassword {
-                //displayAlert(withTitle: "Done", message: "", isLogin: true)
-                performSegue(withIdentifier: "homePage", sender: nil)
-            }else{
-                displayAlert(withTitle: "The username or password is incorrect", message: "", isLogin: false)
-            }
-            
-        }
-        
-        
-        
-        func displayAlert(withTitle title:String, message:String, isLogin:Bool) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Fine", style: .default, handler: {
-                action in if isLogin {
-                    self.performSegue(withIdentifier: "homeScreen", sender: nil)
-                }else{
-                    
-                }
-            })
-            alert.addAction(okAction)
-            self.present(alert,animated: true)
-        }
-        func userLogin() {
-            
-            
-            guard let userName = userName.text else {return}
-            guard let userPassword = Int(password.text ?? "0")else {return}
-            if userAm.name == userName && userAm.password == userPassword {
-                displayAlert(withTitle: "Done", message: "", isLogin: true)
-            }else{
-                displayAlert(withTitle: "fail", message: "", isLogin: false)
-            }
-        }
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if Auth.auth().currentUser != nil {
+            presentSwiftUIView()
+        }
+    }
+    @IBAction func signInAction(_ sender: UIButton) {
+        
+        SignIn(email: email.text ?? "", password: password.text ?? "")
+        
+    }
+    
+    //Go from the registration page to Augomented realty
+    
+    func presentSwiftUIView() {
+        let swiftUIView = ContentView()
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        present(hostingController, animated: true, completion: nil)
+    }
+    func SignIn(email: String,password:String) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            
+            if let error = error {
+                
+                self.showAlert(withTitel: "please check your password and email", messege: "re-enter email and password", isLogin: false)
+                
+                print(error.localizedDescription)
+            } else {
+                self.presentSwiftUIView()
+            }
+            print("email:\(String(describing: authResult?.user.email))")
+            print("uid:\(String(describing: authResult?.user.uid))")
+            // ...
+        }
+    }
+    func showAlert (withTitel titel:String,messege:String,isLogin:Bool){
+        let alert = UIAlertController(title: "Erore", message: messege, preferredStyle: .alert)
+        let okAcction = UIAlertAction(title: "ok", style: .default, handler: { action in if isLogin {
+        }else{
+        }
+        })
+        alert.addAction(okAcction)
+        self.present(alert,animated: true)
+      }
+}

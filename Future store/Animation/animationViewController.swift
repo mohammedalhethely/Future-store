@@ -14,6 +14,7 @@ class animationViewController: UIViewController {
     @IBOutlet weak var loginAnimation: UIButton!
     @IBOutlet weak var signUpAnimation: UIButton!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         ImegViewAnimation()
@@ -30,16 +31,14 @@ class animationViewController: UIViewController {
             self.signUpAnimation.transform = self.signUpAnimation.transform.scaledBy(x: 2, y: 2)
             
         })
+        
         uiAnimationText.startAnimation()
     }
 
     func ImegViewAnimation(){
         
-        
         imageViewAnimation.transform = imageViewAnimation.transform.scaledBy(x: 2, y: 2)
         imageViewAnimation.alpha = 0
-        
-        
         
         UIView.animate(withDuration: 2, delay: 0, options: [.curveEaseOut], animations: {
             
@@ -47,10 +46,7 @@ class animationViewController: UIViewController {
             self.imageViewAnimation.transform.tx = 0
             self.imageViewAnimation.transform = self.imageViewAnimation.transform.scaledBy(x: 0.5, y: 0.5)
             
-            
-            
         })
-        
-    }
-}
+       }
+      }
 
