@@ -24,7 +24,7 @@ class signInViewController: UIViewController {
         if Auth.auth().currentUser != nil {
             presentSwiftUIView()
         }
-    }
+       }
     @IBAction func signInAction(_ sender: UIButton) {
         
         SignIn(email: email.text ?? "", password: password.text ?? "")
@@ -54,14 +54,14 @@ class signInViewController: UIViewController {
             print("uid:\(String(describing: authResult?.user.uid))")
             // ...
         }
-    }
+       }
     func showAlert (withTitel titel:String,messege:String,isLogin:Bool){
         let alert = UIAlertController(title: "Erore", message: messege, preferredStyle: .alert)
         let okAcction = UIAlertAction(title: "ok", style: .default, handler: { action in if isLogin {
         }else{
         }
-        })
+      })
         alert.addAction(okAcction)
         self.present(alert,animated: true)
       }
-}
+     }
