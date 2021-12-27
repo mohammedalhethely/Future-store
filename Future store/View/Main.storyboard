@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,7 +87,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrB-Pi-aao">
                                 <rect key="frame" x="234" y="677" width="160" height="48"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="j4m-zS-nlP"/>
                                     <constraint firstAttribute="height" constant="48" id="trL-aQ-P3S"/>
@@ -101,7 +101,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-vs-zk8">
                                 <rect key="frame" x="20" y="677" width="160" height="48"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="1Si-Ix-Eq3"/>
                                     <constraint firstAttribute="width" constant="160" id="M7B-6J-4Bc"/>
@@ -115,7 +115,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYg-QI-fZj">
                                 <rect key="frame" x="20" y="44" width="374" height="135"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="1Fl-Wi-Huy"/>
                                     <constraint firstAttribute="width" constant="374" id="1ja-V5-UX0"/>
@@ -248,13 +248,13 @@ The name of the application is augmented reality
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q5j-YV-t3O"/>
+        <segue reference="C4K-xD-5Fp"/>
         <segue reference="1lr-xH-guM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="15" width="200" height="355"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>

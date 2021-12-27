@@ -12,6 +12,7 @@ class Model {
     var image: UIImage
     var modelEntity: ModelEntity?
     
+    
     private var cancellable: AnyCancellable? = nil
     
     init(modelName: String) {
