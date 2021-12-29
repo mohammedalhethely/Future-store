@@ -8,8 +8,11 @@ import ARKit
 import Photos
 import QuartzCore
 
+// MARK: - varibales
+
 struct ContentView : View {
     
+    @State private var alertIsPresented = false
     @State private var isPlacementEnabled = false
     @State private var selecterModel: Model?
     @State private var modelConfirmedForPlacement: Model?
@@ -17,7 +20,10 @@ struct ContentView : View {
     
     var arViewContainer : ARViewContainer {
         ARViewContainer(modelConfirmedForPlacement: $modelConfirmedForPlacement, mArView: $mArView)
+        
     }
+    
+    // MARK: - clousers for 3D files
     
     private var models: [Model] =  {
         // Dinamically get out model file names
@@ -38,7 +44,7 @@ struct ContentView : View {
     // MARK: - function To take a screenshot
     
     func screenshot() -> UIImage {
-
+        
         let window = UIApplication.shared.connectedScenes
             .filter({$0.activationState == .foregroundActive})
             .map({$0 as? UIWindowScene})
@@ -46,7 +52,7 @@ struct ContentView : View {
             .first?.windows
             .filter({$0.isKeyWindow}).first
         UIGraphicsBeginImageContext((window?.bounds.size)!)
-
+        
         if let context = UIGraphicsGetCurrentContext() {
             window!.layer.render(in: context)
         }
@@ -54,50 +60,58 @@ struct ContentView : View {
         return image!
     }
     var body: some View {
+       
         // MARK: - Button to capture the screen and save the image
-            HStack{
-                Spacer()
-                GeometryReader { proxy in
+       
+        HStack{
+            Spacer()
+            GeometryReader { proxy in
                 Button(action: {
-                
-                  // UIImageWriteToSavedPhotosAlbum(screenshot(),nil,nil,nil)
+                    self.alertIsPresented = true
                     arViewContainer.takeShot()
+                    
                 }, label: {
+                    Text("")
                     Circle()
                         .fill(Color.black)
                         .overlay(
                             Image(systemName: "camera.shutter.button")
                                 .font(.title2.bold())
                                 .foregroundColor(.white)
+                                
                         )
+                    
                         .frame(width: 60, height: 60)
-                        .shadow(color: .white, radius: 20,  y: 10)
-                        
-                        
+                        .shadow(color: .white, radius: 10,  y: 5)
+                    
                 })
-                }.frame(height: 65)
+                    .alert("saved screen shot in your albums", isPresented: $alertIsPresented, actions: {})
                     
-            }.padding(10)
-            
-            ZStack(alignment: .bottom) {
-                //ARViewContainer(modelConfirmedForPlacement: self.$modelConfirmedForPlacement)
-                arViewContainer
-                
-                if self.isPlacementEnabled {
-                    PlacementButtonsView(isPlacementEnabled: self.$isPlacementEnabled, selecterModel: self.$selecterModel, modelConfirmedForPlacement: self.$modelConfirmedForPlacement)
-                    
-                }else{
-                    ModelPIckerView(isPlacementEnabled: self.$isPlacementEnabled, selecterModel: self.$selecterModel, models: self.models)
-                }
-            }
+            }.frame(height: 65)
+          }
         
+        // MARK: - this for 3D Pic (Bottom)
+        
+        ZStack(alignment: .bottom) {
+            //ARViewContainer(modelConfirmedForPlacement: self.$modelConfirmedForPlacement)
+            arViewContainer
+            
+            if self.isPlacementEnabled {
+                PlacementButtonsView(isPlacementEnabled: self.$isPlacementEnabled, selecterModel: self.$selecterModel, modelConfirmedForPlacement: self.$modelConfirmedForPlacement)
+                
+            }else{
+                ModelPIckerView(isPlacementEnabled: self.$isPlacementEnabled, selecterModel: self.$selecterModel, models: self.models)
+            }
+        }
     }
-    
 }
+
+      // MARK: -for view VR - Vertual reality
+
 struct ARViewContainer: UIViewRepresentable {
     @Binding var modelConfirmedForPlacement: Model?
     @Binding var mArView : ARView?
-
+    
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
@@ -118,6 +132,8 @@ struct ARViewContainer: UIViewRepresentable {
         
     }
     
+    // MARK: - func to take snapshot and save to album
+    
     func takeShot(){
         mArView?.snapshot(saveToHDR: false, completion: { image in
             if let image = image {
@@ -128,11 +144,13 @@ struct ARViewContainer: UIViewRepresentable {
             
         })
         
-        if let mArView = mArView {
+        if mArView != nil {
             print("there is an mArView")
         }
         print("taking a shot")
     }
+    
+    // MARK: - to load model for scane
     
     func updateUIView(_ uiView: ARView, context: Context) {
         if let model = self.modelConfirmedForPlacement {
@@ -141,6 +159,7 @@ struct ARViewContainer: UIViewRepresentable {
                 print("DEBUG: adding model to scene - \(model.modelName)")
                 
                 let anchorEntity = AnchorEntity(plane: .any)
+                
                 
                 anchorEntity.addChild(modelEntity)
                 uiView.scene.addAnchor(anchorEntity)
@@ -160,6 +179,9 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
 }
+
+
+// MARK: - Add product thumbnails
 
 struct ModelPIckerView: View {
     

@@ -27,5 +27,5 @@ class Model {
             self.modelEntity = modelEntity
             print("DEBUG: successfully loaded modelEntity for modelName \(self.modelName)")
         })
-       }
-      }
+    }
+}

@@ -50,8 +50,8 @@ class signUpViewController: UIViewController {
                     self.presentSwiftUIView()
                     
                 } else {
-               }
-              }
-             }
+                }
             }
-           }
+        }
+    }
+}

@@ -18,7 +18,7 @@ class UserApi {
     }
     
     static func getUser(uid:String,completion: @escaping (User) -> Void) {
-       
+        
         let refUsers = Firestore.firestore().collection("Users")
         
         refUsers.document(uid).getDocument { document, error in
@@ -26,6 +26,6 @@ class UserApi {
                 let user = User.getUser(dict: document.data()!)
                 completion(user)
             }
-           }
-          }
-         }
+        }
+    }
+}
