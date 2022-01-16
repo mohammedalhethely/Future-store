@@ -60,9 +60,9 @@ struct ContentView : View {
         return image!
     }
     var body: some View {
-       
+        
         // MARK: - Button to capture the screen and save the image
-       
+        
         HStack{
             Spacer()
             GeometryReader { proxy in
@@ -78,7 +78,8 @@ struct ContentView : View {
                             Image(systemName: "camera.shutter.button")
                                 .font(.title2.bold())
                                 .foregroundColor(.white)
-                                
+                                .background(Color.clear)
+                            
                         )
                     
                         .frame(width: 60, height: 60)
@@ -86,9 +87,9 @@ struct ContentView : View {
                     
                 })
                     .alert("saved screen shot in your albums", isPresented: $alertIsPresented, actions: {})
-                    
+                
             }.frame(height: 65)
-          }
+        }
         
         // MARK: - this for 3D Pic (Bottom)
         
@@ -106,7 +107,7 @@ struct ContentView : View {
     }
 }
 
-      // MARK: -for view VR - Vertual reality
+// MARK: -for view VR - Vertual reality
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var modelConfirmedForPlacement: Model?
@@ -123,8 +124,6 @@ struct ARViewContainer: UIViewRepresentable {
             config.sceneReconstruction = .mesh
             
         }
-        
-        
         
         arView.session.run(config)
         
@@ -160,18 +159,15 @@ struct ARViewContainer: UIViewRepresentable {
                 
                 let anchorEntity = AnchorEntity(plane: .any)
                 
-                
                 anchorEntity.addChild(modelEntity)
                 uiView.scene.addAnchor(anchorEntity)
                 DispatchQueue.main.async {
                     self.mArView = uiView
                 }
                 
-                
             }else{
                 print("DEBUG: unable to load modelEntity for - \(model.modelName)")
             }
-            
             
             DispatchQueue.main.async {
                 self.modelConfirmedForPlacement = nil
@@ -179,7 +175,6 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
 }
-
 
 // MARK: - Add product thumbnails
 
@@ -225,7 +220,6 @@ struct PlacementButtonsView: View {
     var body: some View {
         HStack {
             
-            
             // MARK: - check marks
             
             Button(action:{
@@ -254,14 +248,12 @@ struct PlacementButtonsView: View {
                     .padding(20)
                 
             }
-            
-            
-            
         }
     }
     func resetPlacementParameters() {
         self.isPlacementEnabled = false
         self.selecterModel = nil
+        
         
     }
 }

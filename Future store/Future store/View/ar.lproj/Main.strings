@@ -1,0 +1,70 @@
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "5wl-pO-UrN"; */
+"5wl-pO-UrN.placeholder" = "إيميل";
+
+/* Class = "UITextField"; placeholder = "Enter your email"; ObjectID = "JHC-nD-cbq"; */
+"JHC-nD-cbq.placeholder" = "ادخل الايميل";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "SHB-bB-x5K"; */
+"SHB-bB-x5K.configuration.title" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SHB-bB-x5K"; */
+"SHB-bB-x5K.normalTitle" = "ادخل";
+
+/* Class = "UITextField"; placeholder = "Enter your email"; ObjectID = "VXx-yA-WeC"; */
+"VXx-yA-WeC.placeholder" = "ادخل الايميل";
+
+/* Class = "UITextField"; placeholder = "Enter your email"; ObjectID = "ejn-mg-17J"; */
+"ejn-mg-17J.placeholder" = "ادخل الايميل";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "fg0-vs-zk8"; */
+"fg0-vs-zk8.configuration.title" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fg0-vs-zk8"; */
+"fg0-vs-zk8.normalTitle" = "ادخل";
+
+/* Class = "UILabel"; text = "Augmented Reality\nThe name of the application is augmented reality\n the user can see any new piece in the place he wants through the cam"; ObjectID = "gYg-QI-fZj"; */
+"gYg-QI-fZj.text" = "اسم التطبيق هو الواقع المعزز
+ يمكن للمستخدم رؤية أي قطعة جديدة في المكان الذي يريده من خلال الكاميرا";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "hFw-c0-dGV"; */
+"hFw-c0-dGV.placeholder" = "رقم الجوال";
+
+/* Class = "UITextField"; placeholder = "Password "; ObjectID = "jQc-Uh-Mp2"; */
+"jQc-Uh-Mp2.placeholder" = "الرقم السري ";
+
+/* Class = "UILabel"; text = "Enter the registration data"; ObjectID = "mTT-Kh-rKe"; */
+"mTT-Kh-rKe.text" = "ادخل البيانات المطلوبه";
+
+/* Class = "UILabel"; text = "Enter the registration data"; ObjectID = "sVu-7X-Cdd"; */
+"sVu-7X-Cdd.text" = "ادخل البيانات المطلوبه";
+
+/* Class = "UITextField"; placeholder = "Enter your password"; ObjectID = "t4Z-Pz-zQd"; */
+"t4Z-Pz-zQd.placeholder" = "ادخل الباسوورد";
+
+/* Class = "UIButton"; configuration.title = "Enter"; ObjectID = "t8r-mZ-7a3"; */
+"t8r-mZ-7a3.configuration.title" = "ادخل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "t8r-mZ-7a3"; */
+"t8r-mZ-7a3.normalTitle" = "ادخل";
+
+/* Class = "UIButton"; configuration.title = "Enter"; ObjectID = "v05-sz-jW5"; */
+"v05-sz-jW5.configuration.title" = "ادخل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "v05-sz-jW5"; */
+"v05-sz-jW5.normalTitle" = "ادخل";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "wUR-Oa-tUf"; */
+"wUR-Oa-tUf.placeholder" = "الاسم";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "xH4-fn-ai7"; */
+"xH4-fn-ai7.configuration.title" = "تسجيل جديد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xH4-fn-ai7"; */
+"xH4-fn-ai7.normalTitle" = "ادخل";
+
+/* Class = "UIButton"; configuration.title = "SignUp"; ObjectID = "xrB-Pi-aao"; */
+"xrB-Pi-aao.configuration.title" = "تسجيل جديد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xrB-Pi-aao"; */
+"xrB-Pi-aao.normalTitle" = "ادخل";

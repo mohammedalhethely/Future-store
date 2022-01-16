@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B4D4A6C2765CAA100D9A693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D4A6B2765CAA100D9A693 /* Main.storyboard */; };
+		0B3790F4278DA60E00A84486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3790F6278DA60E00A84486 /* Main.storyboard */; };
 		0B4D4A6E2765CAD900D9A693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D4A6D2765CAD900D9A693 /* LaunchScreen.storyboard */; };
 		0B4D4A702765D82000D9A693 /* signInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D4A6F2765D82000D9A693 /* signInViewController.swift */; };
 		0B4D4A722765D83F00D9A693 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D4A712765D83F00D9A693 /* signUpViewController.swift */; };
@@ -35,7 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B4D4A6B2765CAA100D9A693 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0B3790F5278DA60E00A84486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B3790F8278DA61500A84486 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		0B4D4A6D2765CAD900D9A693 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4D4A6F2765D82000D9A693 /* signInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInViewController.swift; sourceTree = "<group>"; };
 		0B4D4A712765D83F00D9A693 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +46,7 @@
 		0B4D4A8A2766317200D9A693 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		0B9198E82760C9B400CEDA78 /* FAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B9198ED2760C9B400CEDA78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B9198ED2760C9B400CEDA78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		0B9199322762761E00CEDA78 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		0BDA1191276777F4002209A8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		0BDE86A52767BF15002B7D57 /* flower.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = flower.usdz; sourceTree = "<group>"; };
@@ -74,11 +75,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B3790F9278DAA5400A84486 /* Agmented Reality */ = {
+			isa = PBXGroup;
+			children = (
+				0B9198ED2760C9B400CEDA78 /* ContentView.swift */,
+				0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */,
+			);
+			path = "Agmented Reality";
+			sourceTree = "<group>";
+		};
+		0B3790FA278DAAE200A84486 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0BDA1191276777F4002209A8 /* Media.xcassets */,
+				0B9199172760CBB700CEDA78 /* Image3D */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		0B4D4A6A2765CA8100D9A693 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0B4D4A7E27662E3100D9A693 /* GoogleService-Info.plist */,
-				0B4D4A6B2765CAA100D9A693 /* Main.storyboard */,
+				0B3790F6278DA60E00A84486 /* Main.storyboard */,
 				0B4D4A6D2765CAD900D9A693 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -92,14 +111,6 @@
 				0B4D4A872766312900D9A693 /* MODEL */,
 			);
 			path = "Register and login";
-			sourceTree = "<group>";
-		};
-		0B4D4A742765ED1000D9A693 /* augmented reality */ = {
-			isa = PBXGroup;
-			children = (
-				0B9198EB2760C9B400CEDA78 /* AppDelegate.swift */,
-			);
-			path = "augmented reality";
 			sourceTree = "<group>";
 		};
 		0B4D4A752765EDE700D9A693 /* Animation */ = {
@@ -127,6 +138,7 @@
 				0B9198E92760C9B400CEDA78 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		0B9198E92760C9B400CEDA78 /* Products */ = {
 			isa = PBXGroup;
@@ -139,13 +151,11 @@
 		0B9198EA2760C9B400CEDA78 /* Future store */ = {
 			isa = PBXGroup;
 			children = (
-				0B9198ED2760C9B400CEDA78 /* ContentView.swift */,
-				0BDA1191276777F4002209A8 /* Media.xcassets */,
+				0B3790FA278DAAE200A84486 /* Assets */,
+				0B3790F9278DAA5400A84486 /* Agmented Reality */,
 				0B4D4A732765DDA500D9A693 /* Register and login */,
-				0B4D4A742765ED1000D9A693 /* augmented reality */,
 				0B4D4A752765EDE700D9A693 /* Animation */,
 				0B4D4A6A2765CA8100D9A693 /* View */,
-				0B9199172760CBB700CEDA78 /* Image3D */,
 			);
 			path = "Future store";
 			sourceTree = "<group>";
@@ -199,6 +209,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
@@ -214,6 +227,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 0B9198DF2760C9B400CEDA78;
 			packageReferences = (
@@ -237,7 +251,7 @@
 				0BDE86A62767BF15002B7D57 /* flower.usdz in Resources */,
 				0BDE86C12768B8DA002B7D57 /* Comet.usdz in Resources */,
 				0BDA1192276777F4002209A8 /* Media.xcassets in Resources */,
-				0B4D4A6C2765CAA100D9A693 /* Main.storyboard in Resources */,
+				0B3790F4278DA60E00A84486 /* Main.storyboard in Resources */,
 				0BFE2C052769BFAA004AFE71 /* Chalice.usdz in Resources */,
 				0BFE2C042769BFAA004AFE71 /* Lampa.usdz in Resources */,
 				0BDE86A82767BFB1002B7D57 /* gramophone.usdz in Resources */,
@@ -269,6 +283,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0B3790F6278DA60E00A84486 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B3790F5278DA60E00A84486 /* Base */,
+				0B3790F8278DA61500A84486 /* ar */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0B91990C2760C9B500CEDA78 /* Debug */ = {
@@ -394,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -418,6 +445,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huthelyCorp.Future-store";
 				PRODUCT_NAME = FAS;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -429,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -453,6 +482,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huthelyCorp.Future-store";
 				PRODUCT_NAME = FAS;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -20,6 +20,7 @@ class signUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
         //            print(user.email ?? "")
         //        }
@@ -50,6 +51,7 @@ class signUpViewController: UIViewController {
                     self.presentSwiftUIView()
                     
                 } else {
+                    
                 }
             }
         }
