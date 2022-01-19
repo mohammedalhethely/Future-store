@@ -69,7 +69,7 @@ struct ContentView : View {
                 Button(action: {
                     self.alertIsPresented = true
                     arViewContainer.takeShot()
-                    
+
                 }, label: {
                     Text("")
                     Circle()
@@ -79,15 +79,16 @@ struct ContentView : View {
                                 .font(.title2.bold())
                                 .foregroundColor(.white)
                                 .background(Color.clear)
-                            
+
                         )
-                    
+
                         .frame(width: 60, height: 60)
                         .shadow(color: .white, radius: 10,  y: 5)
-                    
+
                 })
+                    .background(Color.clear)
                     .alert("saved screen shot in your albums", isPresented: $alertIsPresented, actions: {})
-                
+
             }.frame(height: 65)
         }
         
